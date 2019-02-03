@@ -30,9 +30,9 @@ public class asn1_b {
       /**
       * Case 2: j =  200000
       **/
-      int m = 200001;
+      int m = 200000;
       //Create a reversely sorted integer array of size 20000
-       int[] myList2 = new int[200000];
+       int[] myList2 = new int[200001];
        for (int i = 0; i < 200000; i++) {
          myList2[i] = m;
          m--;
@@ -54,9 +54,9 @@ public class asn1_b {
        /**
        * Case 3: j =  200000000
        **/
-       int r = 200000001;
+       int r = 200000000;
        //Create a reversely sorted integer array of size 20000
-        int[] myList3 = new int[200000000];
+        int[] myList3 = new int[200000001];
         for (int i = 0; i < 200000000; i++) {
           myList3[i] = r;
           r--;
