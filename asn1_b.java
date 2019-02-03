@@ -26,6 +26,30 @@ public class asn1_b {
       for (int i = 0; i < 20; i++) {
         System.out.println(myList[i]);
       }
+
+      /**
+      * Case 2: j =  200000
+      **/
+      int m = 200001;
+      //Create a reversely sorted integer array of size 20000
+       int[] myList2 = new int[200000];
+       for (int i = 0; i < 200000; i++) {
+         myList[i] = m;
+         m--;
+       }
+
+       // Print out first 20 integers of array before insertion sort
+       for (int i = 0; i < 20; i++) {
+         System.out.println(myList2[i]);
+       }
+
+       // Perform merge sort on myList2
+       performMergeSort(myList2);
+
+       // Print out first 20 integers of array after insertion sort
+       for (int i = 0; i < 20; i++) {
+         System.out.println(myList2[i]);
+       }
    }
 
    // Implement merge sort
@@ -73,13 +97,6 @@ public class asn1_b {
               result[iMerged] = first[iFirst];
               iFirst++;
             }
-            /**
-            if (first[iFirst].compareTo(second[iSecond]) < 0)
-            {
-                result[iMerged] = first[iFirst];
-                iFirst++;
-            }
-            **/
             else
             {
                 result[iMerged] = second[iSecond];

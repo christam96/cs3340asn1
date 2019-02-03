@@ -41,7 +41,7 @@ public class asn1_a {
          System.out.println(myList2[n]);
        }
 
-       // Perform insertion sort on myList
+       // Perform insertion sort on myList2
        int[] arr3 = insertionSort(myList2);
 
        // Print out first 20 integers of array after insertion sort
