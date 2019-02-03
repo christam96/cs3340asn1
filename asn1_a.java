@@ -28,25 +28,25 @@ public class asn1_a {
       /**
       * Case 2: j =  200000
       **/
-      int j = 200000;
+      int m = 200000;
       //Create a reversely sorted integer array of size 20000
-       int[] myList = new int[200001];
-       for (int i = 0; i < 200000; i++) {
-         myList[i] = j;
-         j--;
+       int[] myList2 = new int[200001];
+       for (int n = 0; n < 200000; n++) {
+         myList2[n] = m;
+         m--;
        }
 
        // Print out first 20 integers of array before insertion sort
-       for (int i = 0; i < 20; i++) {
-         System.out.println(myList[i]);
+       for (int n = 0; n < 20; n++) {
+         System.out.println(myList[n]);
        }
 
        // Perform insertion sort on myList
-       int[] arr2 = insertionSort(myList);
+       int[] arr3 = insertionSort(myList);
 
        // Print out first 20 integers of array after insertion sort
-       for (int i = 0; i < 20; i++) {
-         System.out.println(myList[i]);
+       for (int n = 0; n < 20; n++) {
+         System.out.println(myList[n]);
        }
 
     }
