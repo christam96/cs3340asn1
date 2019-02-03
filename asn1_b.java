@@ -44,8 +44,8 @@ public class asn1_b {
         System.arraycopy(list, first.length, second, 0, second.length);
 
         //Sort each half recursively
-        mergeSort(first);
-        mergeSort(second);
+        performMergeSort(first);
+        performMergeSort(second);
 
         //Merge both halves together, overwriting to original array
         merge(first, second, list);
