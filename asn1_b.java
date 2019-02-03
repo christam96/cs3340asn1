@@ -30,7 +30,7 @@ public class asn1_b {
 
    // Implement merge sort
    @SuppressWarnings("rawtypes")
-    public static Comparable[] performMergeSort(Comparable[] list)
+    public static int[] performMergeSort(Comparable[] list)
     {
         //If list is empty; no need to do anything
         if (list.length <= 1) {
@@ -38,8 +38,8 @@ public class asn1_b {
         }
 
         //Split the array in half in two parts
-        Comparable[] first = new Comparable[list.length / 2];
-        Comparable[] second = new Comparable[list.length - first.length];
+        int[] first = new int[list.length / 2];
+        int[] second = new int[list.length - first.length];
         System.arraycopy(list, 0, first, 0, first.length);
         System.arraycopy(list, first.length, second, 0, second.length);
 
@@ -53,7 +53,7 @@ public class asn1_b {
     }
 
     @SuppressWarnings({ "rawtypes", "unchecked" })
-    private static void merge(Comparable[] first, Comparable[] second, Comparable[] result)
+    private static void merge(int[] first, int[] second, int[] result)
     {
         //Index Position in first array - starting with first element
         int iFirst = 0;
