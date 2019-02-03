@@ -5,14 +5,12 @@ public class asn1_a {
     */
 
    public static void main(String []args) {
+     int j = 20000;
+     //Create a reversely sorted integer array of size 20000
       int[] myList = new int[20001];
-      //Create a reversely sorted integer array of size 20000
-      for (int i = 20000; i > 0; i--) {
-        int j = 0;
-        myList[j] = i;
-        System.out.println("Here i is: ");
-        System.out.println(i);
-        j++;
+      for (int i = 0; i < 20000; i++) {
+        myList[i] = j;
+        j--;
       }
 
       // Print out size of array
