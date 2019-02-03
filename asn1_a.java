@@ -14,7 +14,7 @@ public class asn1_a {
       }
 
 
-      int[] arr2 = doInsertionSort(myList);
+      int[] arr2 = insertionSort(myList);
 
 
       // Print out first 20 integers of array before insertion sort
