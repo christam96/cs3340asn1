@@ -13,12 +13,35 @@ public class asn1_a {
         j--;
       }
 
-      // Print out size of array
-      //System.out.println(myList.size());
 
-      // Print out first 20 integers of array
+      int[] arr2 = doInsertionSort(arr1);
+
+
+      // Print out first 20 integers of array before insertion sort
       for (int i = 0; i < 20; i++) {
         System.out.println(myList[i]);
       }
+      // Print out first 20 integers of array after insertion sort
+      for (int i = 0; i < 20; i++) {
+        System.out.println(myList[i]);
+      }
+
+    }
+
+    // Implement insertion sort
+    public static int[] insertionSort(int[] input){
+        int temp;
+        for (int i = 1; i < input.length; i++) {
+            for(int j = i ; j > 0 ; j--){
+                if(input[j] < input[j-1]){
+                    temp = input[j];
+                    input[j] = input[j-1];
+                    input[j-1] = temp;
+                }
+            }
+        }
+        return input;
+    }
+
    }
 }
