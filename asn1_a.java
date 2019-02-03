@@ -43,5 +43,4 @@ public class asn1_a {
         return input;
     }
 
-   }
 }
