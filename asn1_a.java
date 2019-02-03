@@ -13,7 +13,7 @@ public class asn1_a {
       }
 
       // Print out size of array
-      System.out.println(myList.size());
+      //System.out.println(myList.size());
 
       // Print out first 20 integers of array
       for (int i = 0; i < 20; i++) {
