@@ -18,7 +18,7 @@ public class asn1_b {
       }
 
       // Perform merge sort on myList
-      int[] arr2 = sort(myList);
+      performMergeSort(myList);
 
       // Print out first 20 integers of array after insertion sort
       for (int i = 0; i < 20; i++) {
@@ -27,50 +27,60 @@ public class asn1_b {
    }
 
    // Implement merge sort
-   public void sort(int inputArr[]) {
-        this.array = inputArr;
-        this.length = inputArr.length;
-        this.tempMergArr = new int[length];
-        doMergeSort(0, length - 1);
+   @SuppressWarnings("rawtypes")
+    public static Comparable[] performMergeSort(Comparable[] list)
+    {
+        //If list is empty; no need to do anything
+        if (list.length <= 1) {
+            return list;
+        }
+
+        //Split the array in half in two parts
+        Comparable[] first = new Comparable[list.length / 2];
+        Comparable[] second = new Comparable[list.length - first.length];
+        System.arraycopy(list, 0, first, 0, first.length);
+        System.arraycopy(list, first.length, second, 0, second.length);
+
+        //Sort each half recursively
+        mergeSort(first);
+        mergeSort(second);
+
+        //Merge both halves together, overwriting to original array
+        merge(first, second, list);
+        return list;
     }
 
-    private void doMergeSort(int lowerIndex, int higherIndex) {
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+    private static void merge(Comparable[] first, Comparable[] second, Comparable[] result)
+    {
+        //Index Position in first array - starting with first element
+        int iFirst = 0;
 
-        if (lowerIndex < higherIndex) {
-            int middle = lowerIndex + (higherIndex - lowerIndex) / 2;
-            // Below step sorts the left side of the array
-            doMergeSort(lowerIndex, middle);
-            // Below step sorts the right side of the array
-            doMergeSort(middle + 1, higherIndex);
-            // Now merge both sides
-            mergeParts(lowerIndex, middle, higherIndex);
-        }
-    }
+        //Index Position in second array - starting with first element
+        int iSecond = 0;
 
-    private void mergeParts(int lowerIndex, int middle, int higherIndex) {
+        //Index Position in merged array - starting with first position
+        int iMerged = 0;
 
-        for (int i = lowerIndex; i <= higherIndex; i++) {
-            tempMergArr[i] = array[i];
-        }
-        int i = lowerIndex;
-        int j = middle + 1;
-        int k = lowerIndex;
-        while (i <= middle && j <= higherIndex) {
-            if (tempMergArr[i] <= tempMergArr[j]) {
-                array[k] = tempMergArr[i];
-                i++;
-            } else {
-                array[k] = tempMergArr[j];
-                j++;
+        //Compare elements at iFirst and iSecond,
+        //and move smaller element at iMerged
+        while (iFirst < first.length && iSecond < second.length)
+        {
+            if (first[iFirst].compareTo(second[iSecond]) < 0)
+            {
+                result[iMerged] = first[iFirst];
+                iFirst++;
             }
-            k++;
+            else
+            {
+                result[iMerged] = second[iSecond];
+                iSecond++;
+            }
+            iMerged++;
         }
-        while (i <= middle) {
-            array[k] = tempMergArr[i];
-            k++;
-            i++;
-        }
-
+        //copy remaining elements from both halves - each half will have already sorted elements
+        System.arraycopy(first, iFirst, result, iMerged, first.length - iFirst);
+        System.arraycopy(second, iSecond, result, iMerged, second.length - iSecond);
     }
 
 
