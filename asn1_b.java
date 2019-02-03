@@ -68,11 +68,18 @@ public class asn1_b {
         //and move smaller element at iMerged
         while (iFirst < first.length && iSecond < second.length)
         {
+            if (first[iFirst] < second[iSecond])
+            {
+              result[iMerged] = first[iFirst];
+              iFirst++;
+            }
+            /**
             if (first[iFirst].compareTo(second[iSecond]) < 0)
             {
                 result[iMerged] = first[iFirst];
                 iFirst++;
             }
+            **/
             else
             {
                 result[iMerged] = second[iSecond];
