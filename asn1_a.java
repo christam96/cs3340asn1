@@ -38,7 +38,7 @@ public class asn1_a {
 
        // Print out first 20 integers of array before insertion sort
        for (int n = 0; n < 20; n++) {
-         System.out.println(myList[n]);
+         System.out.println(myList2[n]);
        }
 
        // Perform insertion sort on myList
@@ -46,7 +46,7 @@ public class asn1_a {
 
        // Print out first 20 integers of array after insertion sort
        for (int n = 0; n < 20; n++) {
-         System.out.println(myList[n]);
+         System.out.println(myList2[n]);
        }
 
     }
