@@ -8,7 +8,9 @@ public class asn1_a {
       int[] myList = new int[20001];
       //Create a reversely sorted integer array of size 20000
       for (int i = 20000; i > 0; i--) {
-        myList[i] = i;
+        int j = 0;
+        myList[j] = i;
+        j++;
       }
 
       // Print out size of array
