@@ -30,7 +30,7 @@ public class asn1_b {
 
    // Implement merge sort
    @SuppressWarnings("rawtypes")
-    public static int[] performMergeSort(Comparable[] list)
+    public static int[] performMergeSort(int[] list)
     {
         //If list is empty; no need to do anything
         if (list.length <= 1) {
