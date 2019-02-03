@@ -42,7 +42,7 @@ public class asn1_a {
        }
 
        // Perform insertion sort on myList
-       int[] arr3 = insertionSort(myList);
+       int[] arr3 = insertionSort(myList2);
 
        // Print out first 20 integers of array after insertion sort
        for (int n = 0; n < 20; n++) {
