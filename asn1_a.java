@@ -13,14 +13,13 @@ public class asn1_a {
         j--;
       }
 
-
-      int[] arr2 = insertionSort(myList);
-
-
       // Print out first 20 integers of array before insertion sort
       for (int i = 0; i < 20; i++) {
         System.out.println(myList[i]);
       }
+
+      int[] arr2 = insertionSort(myList);
+
       // Print out first 20 integers of array after insertion sort
       for (int i = 0; i < 20; i++) {
         System.out.println(myList[i]);
