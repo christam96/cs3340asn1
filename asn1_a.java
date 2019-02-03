@@ -29,7 +29,7 @@ public class asn1_a {
       * Case 2: j =  200000
       **/
       int m = 200000;
-      //Create a reversely sorted integer array of size 20000
+      //Create a reversely sorted integer array of size 200000
        int[] myList2 = new int[200001];
        for (int n = 0; n < 200000; n++) {
          myList2[n] = m;
