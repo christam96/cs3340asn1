@@ -34,7 +34,7 @@ public class asn1_b {
       //Create a reversely sorted integer array of size 20000
        int[] myList2 = new int[200000];
        for (int i = 0; i < 200000; i++) {
-         myList[i] = m;
+         myList2[i] = m;
          m--;
        }
 
