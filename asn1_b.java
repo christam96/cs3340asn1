@@ -50,6 +50,30 @@ public class asn1_b {
        for (int i = 0; i < 20; i++) {
          System.out.println(myList2[i]);
        }
+
+       /**
+       * Case 3: j =  200000000
+       **/
+       int m = 200000001;
+       //Create a reversely sorted integer array of size 20000
+        int[] myList3 = new int[200000000];
+        for (int i = 0; i < 200000000; i++) {
+          myList3[i] = m;
+          m--;
+        }
+
+        // Print out first 20 integers of array before insertion sort
+        for (int i = 0; i < 20; i++) {
+          System.out.println(myList3[i]);
+        }
+
+        // Perform merge sort on myList3
+        performMergeSort(myList3);
+
+        // Print out first 20 integers of array after insertion sort
+        for (int i = 0; i < 20; i++) {
+          System.out.println(myList3[i]);
+        }
    }
 
    // Implement merge sort
