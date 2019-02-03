@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class asn1_b {
 
    public static void main(String []args) {
