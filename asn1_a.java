@@ -10,6 +10,7 @@ public class asn1_a {
       for (int i = 20000; i > 0; i--) {
         int j = 0;
         myList[j] = i;
+        System.out.println("Here i is: ", i);
         j++;
       }
 
