@@ -3,85 +3,41 @@ import java.util.*;
 public class asn1_c {
 
    public static void main(String []args) {
-     /**
-     * Case 1: j =  20000
-     **/
-     int j = 20000;
-     //Create a reversely sorted integer array of size 20000
-      int[] myList = new int[20001];
-      for (int i = 0; i < 20000; i++) {
-        myList[i] = j;
-        j--;
-      }
-
-      // Print out first 20 integers of array before insertion sort
-      for (int i = 0; i < 20; i++) {
-        System.out.println(myList[i]);
-      }
-
-      // Perform merge sort on myList
-      performMergeSort(myList);
-
-      // Print out first 20 integers of array after insertion sort
-      for (int i = 0; i < 20; i++) {
-        System.out.println(myList[i]);
-      }
-
-      /**
-      * Case 2: j =  200000
-      **/
-      int m = 200000;
-      //Create a reversely sorted integer array of size 20000
-       int[] myList2 = new int[200001];
-       for (int i = 0; i < 200000; i++) {
-         myList2[i] = m;
-         m--;
-       }
-
-       // Print out first 20 integers of array before insertion sort
-       for (int i = 0; i < 20; i++) {
-         System.out.println(myList2[i]);
-       }
-
-       // Perform merge sort on myList2
-       performMergeSort(myList2);
-
-       // Print out first 20 integers of array after insertion sort
-       for (int i = 0; i < 20; i++) {
-         System.out.println(myList2[i]);
-       }
-
        /**
-       * Case 3: j =  200000000
+       * Case 1: r =  200000000
        **/
        int r = 200000000;
+       int k = 2;
        //Create a reversely sorted integer array of size 20000
-        int[] myList3 = new int[200000001];
+        int[] myList = new int[200000001];
         for (int i = 0; i < 200000000; i++) {
-          myList3[i] = r;
+          myList[i] = r;
           r--;
         }
 
         // Print out first 20 integers of array before insertion sort
         for (int i = 0; i < 20; i++) {
-          System.out.println(myList3[i]);
+          System.out.println(myList[i]);
         }
 
         // Perform merge sort on myList3
-        performMergeSort(myList3);
+        for (int i = 0; i < 6; i++) {
+          performMergeSort(myList, k);
+          k = k * k;
+        }
 
         // Print out first 20 integers of array after insertion sort
         for (int i = 0; i < 20; i++) {
-          System.out.println(myList3[i]);
+          System.out.println(myList[i]);
         }
    }
 
    // Implement merge sort
    @SuppressWarnings("rawtypes")
-    public static int[] performMergeSort(int[] list)
+    public static int[] performMergeSort(int[] list, k)
     {
         //If list is empty; no need to do anything
-        if (list.length <= 64) {
+        if (list.length <= k) {
             int[] arr2 = insertionSort(list);
             return list;
         }
