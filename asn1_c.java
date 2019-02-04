@@ -6,11 +6,12 @@ public class asn1_c {
         /**
         * Case 1: r =  200000000
         **/
-        int r = 200000000;
+        // int r = 200000000;
         int k = 2;
 
         for (int n = 0; n < 6; n++) {
-          //Create a reversely sorted integer array of size 20000
+          //Create a reversely sorted integer array of size 2000000000
+          int r = 200000000;
           int[] myList = new int[200000001];
           for (int i = 0; i < 200000000; i++) {
             myList[i] = r;
