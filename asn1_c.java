@@ -9,7 +9,7 @@ public class asn1_c {
         int r = 200000000;
         int k = 2;
 
-        for (int i = 0; i < 6; i++) {
+        for (int n = 0; i < 6; i++) {
           //Create a reversely sorted integer array of size 20000
           int[] myList = new int[200000001];
           for (int i = 0; i < 200000000; i++) {
