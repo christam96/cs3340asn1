@@ -147,5 +147,5 @@ public class asn1_b {
             }
         }
         return input;
-
+    }
 }
