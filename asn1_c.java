@@ -10,11 +10,7 @@ public class asn1_c {
         int k = 2;
 
         for (int n = 0; n < 6; n++) {
-          System.out.println("Iteration for when k = ");
-          System.out.println(k);
-          System.out.println(":");
-
-
+          System.out.println("Iteration for when k = " + k + ":");
           //Create a reversely sorted integer array of size 2000000000
           int r = 200000000;
           int[] myList = new int[200000001];
