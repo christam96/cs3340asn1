@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class asn1_b {
+public class asn1_c {
 
    public static void main(String []args) {
      /**
