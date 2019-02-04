@@ -34,7 +34,7 @@ public class asn1_c {
             System.out.println(myList[i]);
           }
 
-          k = k*k;
+          k = k*2;
         }
 
 
