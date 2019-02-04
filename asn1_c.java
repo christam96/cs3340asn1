@@ -34,7 +34,7 @@ public class asn1_c {
 
    // Implement merge sort
    @SuppressWarnings("rawtypes")
-    public static int[] performMergeSort(int[] list, k)
+    public static int[] performMergeSort(int[] list, int k)
     {
         //If list is empty; no need to do anything
         if (list.length <= k) {
