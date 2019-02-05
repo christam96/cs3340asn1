@@ -1,41 +1,46 @@
 import java.util.*;
+import java.util.Scanner;
+
 
 public class asn1_c {
 
    public static void main(String []args) {
-        /**
-        * Case 1: r =  200000000
-        **/
-        // int r = 200000000;
-        int k = 2;
-
-        for (int n = 0; n < 6; n++) {
-          System.out.println("Iteration for when k = " + k + ":");
-          //Create a reversely sorted integer array of size 2000000000
-          int r = 200000000;
-          int[] myList = new int[200000001];
-          for (int i = 0; i < 200000000; i++) {
-            myList[i] = r;
-            r--;
-          }
-
-          // Print out first 20 integers of array before insertion sort
-          for (int i = 0; i < 20; i++) {
-            System.out.println(myList[i]);
-          }
-
-          // Perform merge sort on myList3
-          performMergeSort(myList, k);
-
-          // Print out first 20 integers of array after insertion sort
-          for (int i = 0; i < 20; i++) {
-            System.out.println(myList[i]);
-          }
-
-          k = k*2;
-        }
+      /**
+      * Case 1: r =  200000000
+      **/
+      // int r = 200000000;
+      // int k = 2;
 
 
+      System.out.println("Iteration for when k = " + k + ":");
+      //Create a reversely sorted integer array of size 2000000000
+      int r = 200000000;
+      int[] myList = new int[200000001];
+      for (int i = 0; i < 200000000; i++) {
+        myList[i] = r;
+        r--;
+      }
+
+      // Print out first 20 integers of array before insertion sort
+      for (int i = 0; i < 20; i++) {
+        System.out.println(myList[i]);
+      }
+
+      Scanner reader = new Scanner(System.in);  // Reading from System.in
+      System.out.println("Enter a number for k: ");
+      int k = reader.nextInt(); // Scans the next token of the input as an int.
+      //once finished
+      reader.close();
+
+      // Perform merge sort on myList3
+      performMergeSort(myList, k);
+
+      // Print out first 20 integers of array after insertion sort
+      for (int i = 0; i < 20; i++) {
+        System.out.println(myList[i]);
+      }
+
+      k = k*2;
 
    }
 

@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\newcommand{\BigO}[1]{\ensuremath{\operatorname{O}\bigl(#1\bigr)}}
+
+\begin{document}
+\title{\Large{\textbf{Christopher Tam - Assignment 1}}}
+\author{Student Number: 250803892}
+\maketitle
+
+\newpage
+
+\section*{Question 1}
+a. Suppose we have $n/k$ sublists, each of length $k$. Performing insertion sort on each of the sublists will take $k^2$ time per sublist in the worst case. Since there are $n/k$ sublists to perform insertion sort on, it will take $k^2$ *  $n/k$ time to sort, which simplifies to $O(n(k))$ time in the worst case. \\\\
+b.  Having coarsened the leaves of the recusion by using inserstion sort within the merge sort algorithm, we may begin the usual merge sort procedure starting at the level in which each array has a size of at most $k$. The depth of the merge tree is thus lg$(n)$ -  lg$(k)$ = lg$(n/k)$. The time it takes for each level to merge is $cn$, so in total the merge sort algorithm augmented with insertion sort takes $O(n lg(n/k))$ worst case time. \\\\
+c. In order for $O$($nk$ + $n$ lg$(n/k)$) = $O$($n$ lg($n$)), either $nk$ = $O$($n$ lg($n$)) or $n$ lg($n/k$) = $O$($n$ lg($n$)). We know that the larger of these two, in terms of asymptotic complexity for k, is $O$(lg$n$). Therefore, while $k(n)$ $\in$ $O$(lg($n$)) it will have the same asymptotic complexity as a standard merge sort.\\\\
+d. To determine the value of $k$ in practice, we should calculate the running time expressions with proper values for the constant factors with different $k$ values until a sufficient one is found.
+
+\section*{Question 2}
+a. $O$ - yes, $o$ - yes, $\Omega$ - no, $\omega$ - no,  $\Theta$ - no\\\\
+b. $O$ - yes, $o$ - yes, $\Omega$ - no, $\omega$ - no,  $\Theta$ - no\\\\
+c. $O$ - no, $o$ - no, $\Omega$ - no, $\omega$ - no,  $\Theta$ - no\\\\
+d. $O$ - no, $o$ - no, $\Omega$ - yes, $\omega$ - yes,  $\Theta$ - no\\\\
+e. $O$ - yes, $o$ - no, $\Omega$ - yes, $\omega$ - no,  $\Theta$ - yes\\\\
+f.  $O$ - yes, $o$ - no, $\Omega$ - yes, $\omega$ - no,  $\Theta$ - yes\\\\
+
+\section*{Question 3}
+a)\\ 
+1. $T(n)$ = $T$($n$/2) + $\Theta$(1). Solving the recurrence relation via the master method we get $T$($n$) = $\Theta$(lg$n$).  \\\\
+2. $T(n)$ = $T$($n$/2) + $\Theta$(n). Solving the recurrence relation we get $T$($n$) = $\Theta$($n$ lg$n$).\\\\ 
+3. $T(n)$ = $T$($n$/2) + $\Theta$($n$/2). Solving the recurrence relation via the master method we get $T$($n$) = $\Theta$($n$).\\\\\\\\
+b) \\ 
+1. $T(n)$ = 2$T$($n$/2) + $cn$. Solving the recurrence relation via the master method we get T($n$) = $\Theta$($n$ lg$n$). \\\\ 
+2. $T(n)$ = 2$T$($n$/2) + $cn$ + 2$\Theta$($n$). Solving the recurrence relation we get T($n$) = $\Theta$($n$ lg$n$) + $\Theta${$n^2$) = $\Theta$($n^2$). \\\\ 
+3. $T(n)$ = 2$T$($n$/2) + $cn$ + 2($c'n$/2). Solving the recurrence relation we get T($n$) = $\Theta$($n$ lg$n$). \\\\\\\\\\\\\\
+
+\section*{Question 4}
+See last page for recurrence tree. The following is the proof for the time complexity of the program:  \\\\
+*Note: All log values are log base 2.\\\\
+$T(2)$ = 1 \\
+$T(n)$ $\leq$ 2$T$($n$/2) + $n$log($n$) \\\\
+$T(n)$ = 2$T$($n$/2) + $n$ log$n$\\
+$T(n)$ = 4$T$($n$/4) + $n$ log$n$ + $n$ log($n$/2)\\
+$T(n)$ = 8$T$($n$/8) + $n$ log($n$/2) + $n$ log($n$/4)\\
+$T(n)$ = 16$T$($n$/16) + $n$ log($n$) + $n$ log($n$/2) + $n$ log($n$/4) + $n$ log($n$/8)\\
+$T(n)$ = ...\\
+$T(n)$ = $n$/2 + $\sum\limits_{i=0}^{log-2} n log(n/2^i)$\\
+Therefore, $T(n)$ = $O(n(log(n)^2)$\\
+
+
+\section*{Question 5}
+a) See asn1-a shell script file.\\\\
+b) See asn1-b shell script file.\\\\
+c) See asn1-c shell script file.\\\\
+d) We do not want to run a) on input size of 200,000,000 given the worst-case time complexity of insertion sort. Since we designed our input array to be reversely sorted, the algorithm would take the worst-case time to correctly sort the array. In comparing the sorting algorithms in b) and c), the best value for $k$ is when $k=16$. This is because at length 16, insertion sort finishes faster than merge sort. 
+
+\end{document}
