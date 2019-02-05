@@ -1,4 +1,6 @@
-Script started on 2019-02-04 20:41:50-05:00
+Script started on 2019-02-04 23:28:46-05:00
+bash-4.4$ who am i
+ctam86   pts/2        2019-02-04 23:28
 bash-4.4$ time java asn1_c
 Iteration for when k = 2:
 200000000
@@ -247,9 +249,9 @@ Iteration for when k = 64:
 18
 19
 
-real	1m14.526s
-user	1m56.493s
-sys	0m6.954s
+real	1m19.848s
+user	2m9.203s
+sys	0m7.517s
 bash-4.4$ exit
 
-Script done on 2019-02-04 20:45:09-05:00
+Script done on 2019-02-04 23:30:18-05:00

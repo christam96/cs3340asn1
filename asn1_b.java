@@ -81,7 +81,7 @@ public class asn1_b {
     public static int[] performMergeSort(int[] list)
     {
         //If list is empty; no need to do anything
-        if (list.length <= 1) {
+        if (list.length <= 8) {
             return list;
         }
 
