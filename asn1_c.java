@@ -11,7 +11,7 @@ public class asn1_c {
       int k = 2;
       Scanner reader = new Scanner(System.in);  // Reading from System.in
       System.out.println("Enter a number for k: ");
-      int k = reader.nextInt(); // Scans the next token of the input as an int.
+      k = reader.nextInt(); // Scans the next token of the input as an int.
       while (k != 0) {
         //Create a reversely sorted integer array of size 2000000000
         int r = 200000000;
